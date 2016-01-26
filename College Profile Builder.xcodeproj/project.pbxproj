@@ -15,6 +15,7 @@
 		AE7533F01C56B8E400647CD6 /* College_Profile_BuilderTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE7533EF1C56B8E400647CD6 /* College_Profile_BuilderTests.swift */; };
 		AE7533FB1C56B8E500647CD6 /* College_Profile_BuilderUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE7533FA1C56B8E500647CD6 /* College_Profile_BuilderUITests.swift */; };
 		AE7534091C579B9900647CD6 /* College.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE7534081C579B9900647CD6 /* College.swift */; };
+		AE75340B1C579F3E00647CD6 /* DetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE75340A1C579F3E00647CD6 /* DetailViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -49,6 +50,7 @@
 		AE7533FA1C56B8E500647CD6 /* College_Profile_BuilderUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = College_Profile_BuilderUITests.swift; sourceTree = "<group>"; };
 		AE7533FC1C56B8E500647CD6 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		AE7534081C579B9900647CD6 /* College.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = College.swift; sourceTree = "<group>"; };
+		AE75340A1C579F3E00647CD6 /* DetailViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DetailViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -101,6 +103,7 @@
 			children = (
 				AE7533DA1C56B8E400647CD6 /* AppDelegate.swift */,
 				AE7533DC1C56B8E400647CD6 /* ViewController.swift */,
+				AE75340A1C579F3E00647CD6 /* DetailViewController.swift */,
 				AE7534081C579B9900647CD6 /* College.swift */,
 				AE7533DE1C56B8E400647CD6 /* Main.storyboard */,
 				AE7533E11C56B8E400647CD6 /* Assets.xcassets */,
@@ -262,6 +265,7 @@
 				AE7533DD1C56B8E400647CD6 /* ViewController.swift in Sources */,
 				AE7533DB1C56B8E400647CD6 /* AppDelegate.swift in Sources */,
 				AE7534091C579B9900647CD6 /* College.swift in Sources */,
+				AE75340B1C579F3E00647CD6 /* DetailViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
