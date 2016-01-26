@@ -94,17 +94,17 @@
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Name" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="gdA-nq-5uv">
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Name" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="gdA-nq-5uv">
                                 <rect key="frame" x="200" y="82" width="200" height="30"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
-                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Location" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="KyH-n4-PiQ">
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Location" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="KyH-n4-PiQ">
                                 <rect key="frame" x="200" y="132" width="200" height="30"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
-                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Enrollment" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="VII-9z-c1c">
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Enrollment" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="VII-9z-c1c">
                                 <rect key="frame" x="200" y="179" width="200" height="30"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits" keyboardType="numberPad"/>
@@ -116,7 +116,7 @@
                                     <constraint firstAttribute="width" constant="250" id="rbU-tJ-Qel"/>
                                 </constraints>
                             </imageView>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Tq4-Iu-YE5">
+                            <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Tq4-Iu-YE5">
                                 <rect key="frame" x="277" y="383" width="46" height="30"/>
                                 <state key="normal" title="Save"/>
                                 <connections>
@@ -125,6 +125,13 @@
                             </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="ViM-Ej-h8y" firstAttribute="centerX" secondItem="Mzi-cH-YsD" secondAttribute="centerX" id="FfY-U2-AVb"/>
+                            <constraint firstItem="Tq4-Iu-YE5" firstAttribute="centerX" secondItem="Mzi-cH-YsD" secondAttribute="centerX" id="RRI-Df-yQ4"/>
+                            <constraint firstItem="KyH-n4-PiQ" firstAttribute="centerX" secondItem="Mzi-cH-YsD" secondAttribute="centerX" id="UUs-X5-ti4"/>
+                            <constraint firstItem="gdA-nq-5uv" firstAttribute="centerX" secondItem="Mzi-cH-YsD" secondAttribute="centerX" id="l3t-8y-1Zm"/>
+                            <constraint firstItem="VII-9z-c1c" firstAttribute="centerX" secondItem="Mzi-cH-YsD" secondAttribute="centerX" id="lVo-sf-u7X"/>
+                        </constraints>
                     </view>
                     <connections>
                         <outlet property="enrollmentTextField" destination="VII-9z-c1c" id="gvU-eZ-lMh"/>
