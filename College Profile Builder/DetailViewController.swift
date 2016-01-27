@@ -7,12 +7,14 @@
 //
 
 import UIKit
+import SafariServices
 
-class DetailViewController: UIViewController {
+class DetailViewController: UIViewController, SFSafariViewControllerDelegate {
 
     @IBOutlet weak var nameTextField: UITextField!
     @IBOutlet weak var locationTextField: UITextField!
     @IBOutlet weak var enrollmentTextField: UITextField!
+    @IBOutlet weak var websiteTextField: UITextField!
     @IBOutlet weak var imageView: UIImageView!
     var college: College!
     
@@ -21,6 +23,7 @@ class DetailViewController: UIViewController {
         nameTextField.text = college.name
         locationTextField.text = college.location
         enrollmentTextField.text = String(college.enrollment)
+        websiteTextField.text = college.webpage
         imageView.image = college.image
     }
 
@@ -28,5 +31,18 @@ class DetailViewController: UIViewController {
         college.name = nameTextField.text!
         college.location = locationTextField.text!
         college.enrollment = Int(enrollmentTextField.text!)!
+        college.webpage = websiteTextField.text!
+    }
+
+    @IBAction func onGoButtonTapped(sender: UIButton) {
+        if let url = NSURL(string: websiteTextField.text!) {
+            let svc = SFSafariViewController(URL: url)
+            svc.delegate = self
+            self.presentViewController(svc, animated: true, completion: nil)
+        }
+    }
+
+    func safariViewControllerDidFinish(controller: SFSafariViewController) {
+        controller.dismissViewControllerAnimated(true, completion: nil)
     }
 }

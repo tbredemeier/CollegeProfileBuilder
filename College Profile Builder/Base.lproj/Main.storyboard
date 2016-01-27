@@ -100,24 +100,36 @@
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Location" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="KyH-n4-PiQ">
-                                <rect key="frame" x="200" y="132" width="200" height="30"/>
+                                <rect key="frame" x="200" y="120" width="200" height="30"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Enrollment" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="VII-9z-c1c">
-                                <rect key="frame" x="200" y="179" width="200" height="30"/>
+                                <rect key="frame" x="200" y="158" width="200" height="30"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits" keyboardType="numberPad"/>
                             </textField>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="ViM-Ej-h8y">
-                                <rect key="frame" x="175" y="225" width="250" height="150"/>
+                                <rect key="frame" x="175" y="234" width="250" height="150"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="150" id="D1V-5t-xVh"/>
                                     <constraint firstAttribute="width" constant="250" id="rbU-tJ-Qel"/>
                                 </constraints>
                             </imageView>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Website" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="8Q2-g6-Qys">
+                                <rect key="frame" x="200" y="196" width="200" height="30"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="8Ij-Gh-taF">
+                                <rect key="frame" x="413" y="196" width="46" height="30"/>
+                                <state key="normal" title="Go"/>
+                                <connections>
+                                    <action selector="onGoButtonTapped:" destination="vTH-dd-O7b" eventType="touchUpInside" id="fwh-Y4-8ry"/>
+                                </connections>
+                            </button>
                             <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Tq4-Iu-YE5">
-                                <rect key="frame" x="277" y="383" width="46" height="30"/>
+                                <rect key="frame" x="277" y="392" width="46" height="30"/>
                                 <state key="normal" title="Save"/>
                                 <connections>
                                     <action selector="onTappedButton:" destination="vTH-dd-O7b" eventType="touchUpInside" id="cny-NQ-XoS"/>
@@ -126,18 +138,22 @@
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
+                            <constraint firstItem="8Q2-g6-Qys" firstAttribute="centerX" secondItem="Mzi-cH-YsD" secondAttribute="centerX" id="9FN-yE-Ekl"/>
                             <constraint firstItem="ViM-Ej-h8y" firstAttribute="centerX" secondItem="Mzi-cH-YsD" secondAttribute="centerX" id="FfY-U2-AVb"/>
                             <constraint firstItem="Tq4-Iu-YE5" firstAttribute="centerX" secondItem="Mzi-cH-YsD" secondAttribute="centerX" id="RRI-Df-yQ4"/>
+                            <constraint firstItem="8Ij-Gh-taF" firstAttribute="leading" secondItem="8Q2-g6-Qys" secondAttribute="trailing" constant="13" id="Ss7-I2-xDA"/>
                             <constraint firstItem="KyH-n4-PiQ" firstAttribute="centerX" secondItem="Mzi-cH-YsD" secondAttribute="centerX" id="UUs-X5-ti4"/>
                             <constraint firstItem="gdA-nq-5uv" firstAttribute="centerX" secondItem="Mzi-cH-YsD" secondAttribute="centerX" id="l3t-8y-1Zm"/>
                             <constraint firstItem="VII-9z-c1c" firstAttribute="centerX" secondItem="Mzi-cH-YsD" secondAttribute="centerX" id="lVo-sf-u7X"/>
                         </constraints>
                     </view>
+                    <toolbarItems/>
                     <connections>
                         <outlet property="enrollmentTextField" destination="VII-9z-c1c" id="gvU-eZ-lMh"/>
                         <outlet property="imageView" destination="ViM-Ej-h8y" id="ur5-3m-v3G"/>
                         <outlet property="locationTextField" destination="KyH-n4-PiQ" id="fjZ-bt-wP1"/>
                         <outlet property="nameTextField" destination="gdA-nq-5uv" id="7oW-4A-yfu"/>
+                        <outlet property="websiteTextField" destination="8Q2-g6-Qys" id="HM6-ZE-PMU"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="YAA-UN-eds" userLabel="First Responder" sceneMemberID="firstResponder"/>
