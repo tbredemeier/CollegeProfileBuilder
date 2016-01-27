@@ -9,7 +9,7 @@
 import UIKit
 import SafariServices
 
-class DetailViewController: UIViewController, SFSafariViewControllerDelegate {
+class DetailViewController: UIViewController, SFSafariViewControllerDelegate, UIImagePickerControllerDelegate, UINavigationControllerDelegate {
 
     @IBOutlet weak var nameTextField: UITextField!
     @IBOutlet weak var locationTextField: UITextField!
@@ -17,6 +17,7 @@ class DetailViewController: UIViewController, SFSafariViewControllerDelegate {
     @IBOutlet weak var websiteTextField: UITextField!
     @IBOutlet weak var imageView: UIImageView!
     var college: College!
+    let imagePicker = UIImagePickerController()
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -25,6 +26,7 @@ class DetailViewController: UIViewController, SFSafariViewControllerDelegate {
         enrollmentTextField.text = String(college.enrollment)
         websiteTextField.text = college.webpage
         imageView.image = college.image
+        imagePicker.delegate = self
     }
 
     @IBAction func onTappedButton(sender: UIButton) {
@@ -32,6 +34,18 @@ class DetailViewController: UIViewController, SFSafariViewControllerDelegate {
         college.location = locationTextField.text!
         college.enrollment = Int(enrollmentTextField.text!)!
         college.webpage = websiteTextField.text!
+        college.image = imageView.image
+    }
+
+    func safariViewControllerDidFinish(controller: SFSafariViewController) {
+        controller.dismissViewControllerAnimated(true, completion: nil)
+    }
+
+    func imagePickerController(picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [String : AnyObject]) {
+        imagePicker.dismissViewControllerAnimated(true) { () -> Void in
+            let selectedImage = info[UIImagePickerControllerOriginalImage] as! UIImage
+            self.imageView.image = selectedImage
+        }
     }
 
     @IBAction func onGoButtonTapped(sender: UIButton) {
@@ -41,8 +55,16 @@ class DetailViewController: UIViewController, SFSafariViewControllerDelegate {
             self.presentViewController(svc, animated: true, completion: nil)
         }
     }
+    
+    @IBAction func onLibraryButtonTapped(sender: UIButton) {
+        imagePicker.sourceType = UIImagePickerControllerSourceType.PhotoLibrary
+        presentViewController(imagePicker, animated: true, completion: nil)
+    }
 
-    func safariViewControllerDidFinish(controller: SFSafariViewController) {
-        controller.dismissViewControllerAnimated(true, completion: nil)
+    @IBAction func onCameraButtonTapped(sender: UIButton) {
+        if UIImagePickerController.isSourceTypeAvailable(.Camera) {
+            imagePicker.sourceType = UIImagePickerControllerSourceType.Camera
+            presentViewController(imagePicker, animated: true, completion: nil)
+        }
     }
 }
